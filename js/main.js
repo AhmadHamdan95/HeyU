@@ -1,0 +1,29 @@
+$(document).ready(function(){
+    var scrollTop =0;
+    $(window).scroll(function(){
+        scrollTop = $(window).scrollTop();
+        if (scrollTop > 0){
+            $('.navbar').addClass ('scrollNav');
+			$('#backToTop').addClass ('visible');
+			
+        }else if (scrollTop == 0){
+            $('.navbar').removeClass('scrollNav');
+			$('#backToTop').removeClass ('visible');
+        };
+    });
+	$('#backToTop').click (function(){
+		$('body , html').animate({
+			scrollTop:0
+		},800);
+	});
+	
+	
+	
+	
+    /*$('#backToTop').click(function() {      // When arrow is clicked
+        $('body,html').animate({
+            scrollTop : 0                       
+        }, 500);
+    });*/
+
+});
